@@ -109,6 +109,14 @@ footer {
     background: #4b2e2e;
     color: #fff;
     width: 100%;
+
+    text-align: center;
+            padding: 20px;
+            background-color: #4b2e2e;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
 }
 
 .comidas {
