@@ -1,17 +1,25 @@
+:root {
+    --cor-principal: #4b2e2e;
+    --cor-secundaria: #fff;
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333;
+    --cor-borda: #ddd;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --largura-maxima-item: 30%;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     height: 100vh;
-
-    
 }
 
 header {
-    background: #4b2e2e; /* Cor de cafeteria */
-    color: #fff;
+    background: var(--cor-principal);
+    color: var(--cor-secundaria);
     padding: 10px 0;
     text-align: center;
     height: 10vh;
@@ -29,7 +37,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--cor-secundaria);
     text-decoration: none;
 }
 
@@ -38,7 +46,7 @@ main {
 }
 
 h3 {
-    color: #4b2e2e; /* Cor de destaque */
+    color: var(--cor-principal);
     align-items: center;
     display: block;
 }
@@ -50,34 +58,32 @@ h3 {
 }
 
 .item {
-    background: #fff;
-    border: 1px solid #ddd;
+    background: var(--cor-secundaria);
+    border: 1px solid var(--cor-borda);
     border-radius: 5px;
     padding: 15px;
     margin: 10px;
-    width: calc(30% - 20px); /* Ajuste para três itens por linha */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(var(--largura-maxima-item) - 20px);
+    box-shadow: 0 2px 5px var(--cor-sombra);
     text-align: center;
 }
 
 .item img {
-    width: 300px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
     border-radius: 15px;
-
 }
 
 form {
-    background: #fff;
+    background: var(--cor-secundaria);
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px var(--cor-sombra);
 }
 
 form label {
     display: block;
     margin: 10px 0 5px;
-    
 }
 
 form input, form textarea {
@@ -89,8 +95,8 @@ form input, form textarea {
 }
 
 form button {
-    background: #4b2e2e; /* Cor do botão */
-    color: #fff;
+    background: var(--cor-principal);
+    color: var(--cor-secundaria);
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -98,28 +104,22 @@ form button {
 }
 
 form button:hover {
-    background: #4b2e2e; /* Cor do botão ao passar o mouse */
+    background: var(--cor-principal);
 }
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding-bottom: 25px;
     margin-top: 10vh;
-
-    background: #4b2e2e;
-    color: #fff;
+    background: var(--cor-principal);
+    color: var(--cor-secundaria);
     width: 100%;
-
     text-align: center;
-            padding: 20px;
-            background-color: #4b2e2e;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
 }
 
 .comidas {
@@ -137,12 +137,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding-bottom: 25px;
     margin-top: 25vh;
-
-    background: #4b2e2e;
-    color: #fff;
+    background: var(--cor-principal);
+    color: var(--cor-secundaria);
     width: 100%;
 }
 
@@ -150,5 +148,26 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #4b2e2e;
+    color: var(--cor-principal);
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: calc(45% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: calc(100% - 20px);
+    }
+
+    header {
+        height: auto;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
 }
